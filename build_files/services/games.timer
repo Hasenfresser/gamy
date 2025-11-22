@@ -1,0 +1,9 @@
+[Unit]
+Description="Timer for Games disk decryption and mounting"
+
+[Timer]
+OnBootSec=10s
+Unit=games.service
+
+[Install]
+WantedBy=multi-user.target
