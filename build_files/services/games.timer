@@ -2,7 +2,7 @@
 Description="Timer for Games disk decryption and mounting"
 
 [Timer]
-OnBootSec=10s
+OnBootSec=5s
 Unit=games.service
 
 [Install]

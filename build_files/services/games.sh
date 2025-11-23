@@ -24,11 +24,11 @@ MNT_HDD=$MNT"Linux-Games-HDD"
 mkdir -p $MNT_M2 $MNT_HDD || exit 1
 
 [ -e $DM_M2 ] || cryptsetup open $DEV_M2 --key-file=$KEY_M2 $M2 || exit 10
-sleep 5
+sleep 1
 mountpoint -q $MNT_M2 || mount -o defaults,noatime $DM_M2 $MNT_M2 || exit 11
 
 [ -e $DM_HDD ] || (cat $KEY_HDD | cryptsetup open --type bitlk $DEV_HDD $HDD) || exit 20
-sleep 5
+sleep 1
 mountpoint -q $MNT_HDD || mount -o defaults $DM_HDD $MNT_HDD || exit 21
 
 echo All games disks decrypted and mounted!

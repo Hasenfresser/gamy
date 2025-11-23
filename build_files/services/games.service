@@ -3,3 +3,5 @@ Description="Decrypts and mount games disks"
 
 [Service]
 ExecStart=sh /usr/lib/systemd/system/games.sh
+Type=oneshot
+RemainAfterExit=yes
